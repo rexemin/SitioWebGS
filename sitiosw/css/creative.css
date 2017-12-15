@@ -9,7 +9,9 @@ html {
   height: 100%; }
 
 body {
-    font-family: FranklinITCProThin,FranklinITCStdLight,"Franklin Gothic","ITC Franklin Gothic",Arial,sans-serif; }
+    font-family: FranklinITCProThin,FranklinITCStdLight,"Franklin Gothic","ITC Franklin Gothic",Arial,sans-serif;
+    font-size: 18px;
+}
 
 hr {
   max-width: 50px;
@@ -38,7 +40,7 @@ h6 {
  }
 
 .bg-primary {
-  background-color: #969C4C !important; }
+  background-color: #6C7415 !important; }
 
 .bg-dark {
   background-color: #212529 !important; }
@@ -182,7 +184,7 @@ header.masthead {
 }
 
 .referencias {
-    background-color: #419BB099 !important;
+    background-color: #7FA5AE99 !important;
 }
 
 .text-primary {
