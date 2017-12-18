@@ -1,0 +1,20 @@
+{
+    "length":17,
+    "pt1":"Introducción",
+    "pt2":"Proyecto",
+    "pt3":"Publicaciones",
+    "pt4":"Sustentabilidad",
+    "pt5":"Prácticas",
+    "pt6":"Referencias",
+    "pt7":"Contacto",
+    "pt8":"English",
+    "pt9":"Software Verde",
+    "pt10":"Introducción",
+    "pt11":"Las tecnologías de la información (TI) tienen una influencia significativa en las iniciativas de desarrollo sustentable. Se cree que pueden ayudar a disminuir el impacto de las actividades industriales y humanas al minimizar el consumo de energía eléctrica y otros recursos durante su desarrollo y operación. Aunque se han desarrollado tecnologías para reducir el impacto de las TI en el medio ambiente, particularmente en el área de hardware, la investigación y desarrollo de tecnologías de software que contribuyan al  desarrollo sustentable está en etapas iniciales.",
+    "pt12":"En una computadora, el hardware es responsable del consumo de energía eléctrica. Sin embargo, el software se encarga de controlar el hardware y de facilitar distintos procesos organizacionales. Por tanto, el software consume energía eléctrica de forma indirecta. Algunas investigaciones han mostrado que la forma en que los sistemas de software están diseñados, programados y desplegados tiene un impacto variable en el consumo de energía eléctrica. El software que reduce su impacto negativo en el medio ambiente y contribuye a las metas del desarrollo sustentable se conoce como software verde.",
+    "pt13":"Identificación de prácticas de desarrollo de software que contribuyen al desarrollo del software verde",
+    "pt14":"Clave: USO315002885",
+    "pt15":"Responsable del proyecto: Gabriel Alberto García Mireles",
+    "pt16":"Objetivo:",
+    "pt17":"Identificar prácticas de desarrollo de software que tienen un impacto potencial positivo en el medio ambiente. En este trabajo nos centraremos en el software de aplicación y las prácticas recomendadas se clasificarán según las etapas del ciclo de vida del producto. Como resultado de este proyecto, se elaborará un modelo conceptual de prácticas de mejora para el desarrollo de software verde considerando los procesos del ciclo de vida del software."
+}

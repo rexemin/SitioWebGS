@@ -24,6 +24,45 @@
     <!-- Custom styles for this template -->
     <link href="css/creative.css" rel="stylesheet">
 
+    <!-- Cambio de idiomas -->
+    <script type="text/javascript">
+        window.onload = function()
+        {
+            var idiomaActual = "es";
+            var btnIdiomas = document.getElementById("sec8");
+
+            btnIdiomas.onclick = function()
+            {
+                var jsonURL;
+
+                // Se decide que paquete de idioma se va a usar.
+                if (idiomaActual.valueOf() == "es") {
+                    jsonURL = './json/eng.json';
+                    idiomaActual = "en";
+                } else {
+                    jsonURL = './json/esp.json';
+                    idiomaActual = "es";
+                }
+
+                // Se pide la información contenida en el json.
+                var peticion = new XMLHttpRequest();
+                peticion.open('GET', jsonURL);
+                peticion.responseType = 'json';
+                peticion.send();
+                peticion.onload = function()
+                {
+                    var textoLang = peticion.response;
+                    var numSecciones = textoLang["length"];
+
+                    // Se cambia uno a uno los elementos del sitio.
+                    for (var seccion = 1; seccion <= numSecciones; seccion++) {
+                        document.getElementById("sec" + seccion).innerHTML = textoLang["pt" + seccion];
+                    }
+                }
+            }
+        }
+    </script>
+
   </head>
 
   <body id="page-top">
@@ -38,25 +77,28 @@
         <div class="collapse navbar-collapse" id="navbarResponsive">
           <ul class="navbar-nav ml-auto">
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#introduccion">Introducción</a>
+              <a id="sec1" class="nav-link js-scroll-trigger" href="#introduccion">Introducción</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#proyecto">Proyecto</a>
+              <a id="sec2" class="nav-link js-scroll-trigger" href="#proyecto">Proyecto</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#pub">Publicaciones</a>
+              <a id="sec3" class="nav-link js-scroll-trigger" href="#pub">Publicaciones</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#sust">Sustentabilidad</a>
+              <a id="sec4" class="nav-link js-scroll-trigger" href="#sust">Sustentabilidad</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#practicas">Prácticas</a>
+              <a id="sec5" class="nav-link js-scroll-trigger" href="#practicas">Prácticas</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#ref">Referencias</a>
+              <a id="sec6" class="nav-link js-scroll-trigger" href="#ref">Referencias</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#contacto">Contacto</a>
+              <a id="sec7" class="nav-link js-scroll-trigger" href="#contacto">Contacto</a>
+            </li>
+            <li class="nav-item">
+                <button id="sec8" type="button" class="btn btn-link">English</button>
             </li>
           </ul>
         </div>
@@ -68,7 +110,7 @@
         <div class="row">
           <div class="col-lg-10 mx-auto">
             <div class="text_wrap_center">
-                <h1 class="text-uppercase">
+                <h1 id="sec9" class="text-uppercase">
                   <strong>Software Verde</strong>
                 </h1>
                 <hr>
@@ -85,15 +127,15 @@
       <div class="container">
         <div class="row">
           <div class="col-lg-10 mx-auto text-center">
-            <h2 class="section-heading text-white">Introducción</h2>
+            <h2 id="sec10" class="section-heading text-white">Introducción</h2>
             <hr class="my-4">
-            <p class="text-white" align="justify">Las tecnologías de la información (TI) tienen una influencia significativa en las iniciativas
+            <p id="sec11" class="text-white" align="justify">Las tecnologías de la información (TI) tienen una influencia significativa en las iniciativas
               de desarrollo sustentable. Se cree que pueden ayudar a disminuir el impacto de las actividades industriales y humanas
               al minimizar el consumo de energía eléctrica y otros recursos durante su desarrollo y operación. Aunque se han desarrollado
               tecnologías para reducir el impacto de las TI en el medio ambiente, particularmente en el área de hardware, la investigación
               y desarrollo de tecnologías de software que contribuyan al  desarrollo sustentable está en etapas iniciales.
             </p>
-            <p class="text-white" align="justify">En una computadora, el hardware es responsable del consumo de energía eléctrica. Sin embargo,
+            <p id="sec12" class="text-white" align="justify">En una computadora, el hardware es responsable del consumo de energía eléctrica. Sin embargo,
               el software se encarga de controlar el hardware y de facilitar distintos procesos organizacionales. Por tanto, el software
               consume energía eléctrica de forma indirecta. Algunas investigaciones han mostrado que la forma en que los sistemas de software
               están diseñados, programados y desplegados tiene un impacto variable en el consumo de energía eléctrica. El software que reduce
@@ -108,12 +150,12 @@
       <div class="container">
         <div class="row">
           <div class="col-lg-12 mx-auto text-center">
-            <h2 class="section-heading">Identificación de prácticas de desarrollo de software que contribuyen al desarrollo del software verde</h2>
+            <h2 id="sec13" class="section-heading">Identificación de prácticas de desarrollo de software que contribuyen al desarrollo del software verde</h2>
             <hr class="my-4">
-                <p><strong>Clave: USO315002885</strong></p>
-                <p><strong>Responsable del proyecto: Gabriel Alberto García Mireles</strong></p>
-                <p>Objetivo:</p>
-                <p align="justify">Identificar prácticas de desarrollo de software que tienen un impacto potencial positivo en el medio ambiente.
+                <p id="sec14"><strong>Clave: USO315002885</strong></p>
+                <p id="sec15"><strong>Responsable del proyecto: Gabriel Alberto García Mireles</strong></p>
+                <p id="sec16">Objetivo:</p>
+                <p id="sec17" align="justify">Identificar prácticas de desarrollo de software que tienen un impacto potencial positivo en el medio ambiente.
                   En este trabajo nos centraremos en el software de aplicación y las prácticas recomendadas se clasificarán según
                   las etapas del ciclo de vida del producto. Como resultado de este proyecto, se elaborará un modelo conceptual de
                   prácticas de mejora para el desarrollo de software verde considerando los procesos del ciclo de vida del software.
