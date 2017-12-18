@@ -322,6 +322,28 @@
     <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
     <script src="vendor/scrollreveal/scrollreveal.min.js"></script>
     <script src="vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBiPmyxhbErUdGOd-6CGJOjPjpEVvs_eIg&callback=initMap"
+    type="text/javascript"></script>
+
+
+    <!-- Funcion para desplegar el mapa -->
+    <script>
+      function initMap() {
+        var uluru =  {lat: 29.083589, lng: -110.960351};
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 15,
+          center: uluru
+        });
+        var marker = new google.maps.Marker({
+          position: uluru,
+          map: map
+        });
+      }
+    </script>
+
+
+
+
 
     <!-- Custom scripts for this template -->
     <script src="js/creative.min.js"></script>
