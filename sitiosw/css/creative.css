@@ -75,6 +75,10 @@ img::-moz-selection {
 body {
   -webkit-tap-highlight-color: #212529; }
 
+table, th, td {
+    border: 1px solid white;
+    border-collapse: collapse;}
+
 #mainNav {
   border-bottom: 1px solid rgba(33, 37, 41, 0.1);
   background-color: #fff;
